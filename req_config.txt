@@ -1,0 +1,29 @@
+
+# REQ MGMT SAMPLE 
+
+# execution: gawk -f req.awk
+
+mainform.jsp = java_code javascript_code		# for mainform.jsp: do remind me the java_code checklist items and the javascript_code checklist items
+loginform.jsp = java_code javascript_code sensitive_data 	# loginform.jsp: do remind me the sensitive_data checklist items too
+username_table = database_table sensitive_data
+editcontroller.jsp = java_code javascript_code
+
+java_code : function_parameters	readability					# the checklist items for java_code = c.i. for function_parameters UNION c.i. for readability
+javascript_code : function_parameters readability strict	# the checklist items for javascript_code = c.i. for strict too
+
+function_parameters ? input parameter validation check is performed (not null / not empty)	# first requirement / best practice for function_parameters
+function_parameters ? input parameter validation check is performed (minimum length)
+function_parameters ? input parameter validation check is performed (is a valid switch)
+function_parameters ? input parameters are UTF-8 encoded
+java_code ? java.net.URLEncoder.encode is deprecated
+sensitive_data ? never stored in clear
+sensitive_data ? sent over secure HTTPS
+sensitive_data ? never logged server-side
+database_table ? PK is in place
+readability ? keep functions under 50 lines
+javascript_code ? no console.log in production
+
+
+(username_table->database_table) PK is in place!username(after trim and lowercase)		# I took an item from the output generated my awk and copied here, plus comments after the !
+
+
