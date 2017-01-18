@@ -7,3 +7,7 @@ I run the program which prints all the facts I want to be verified on all my obj
 
 Whenever I verify a fact for an object, I mark it as PASS in the file.
 
+
+keywords / categories:
+implementing best practices, declarative programming, software quality control, checklists, development tools
+
