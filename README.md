@@ -1,5 +1,6 @@
 # requack
 Requack supports my software quality-control activities as a checklist maintenance tool.
+I use Requack to make sure that the best practices are implemented in my software.
 
 I define my software objects, their classes and a checklist for each class - all in a single file.
 
